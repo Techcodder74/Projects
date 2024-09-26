@@ -38,6 +38,7 @@
 // console.log("Your score =", humanscore);
 let compscore=0;
 let humanscore=0;
+let qwe=0;
 function getRandomInt(max){
     return Math.floor(Math.random()*max);
 }
