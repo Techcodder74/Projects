@@ -57,20 +57,20 @@ function Play(hu){
     else w="Paper";
     if(hu==ss)ty="Draw";
     else if((hu==1&&ss==2)||(hu==0&&ss==1)||(hu==2&&ss==0)){
-        ty="Comp chose"+w+"You lose\n";
+        ty="Comp chose "+w+" You lose\n";
         compscore=compscore+1;
     }
     else{
-        ty="Comp chose"+w+"You win\n";
+        ty="Comp chose "+w+" You win\n";
         humanscore=humanscore+1;
     }
     const container = document.querySelector("#container");
 
-const content = document.createElement("div");
-content.classList.add("content");
-content.textContent =ty ;
-
-container.appendChild(content);
+// const content = document.createElement("div");
+// content.classList.add("content");
+// content.textContent =ty ;
+container.innerHTML=ty;
+// container.appendChild(content);
 
 }
 
@@ -97,11 +97,11 @@ sc.addEventListener("click", ()=>
 {
     const container = document.querySelector("#container");
 
-    const content = document.createElement("div");
-    content.classList.add("content");
-    content.textContent = "Computer score = "+String(compscore)+" Your Score = "+ String(humanscore) ;
+    // const content = document.createElement("div");
+    // content.classList.add("content");
+    container.innerHTML = "Computer score = "+String(compscore)+" Your Score = "+ String(humanscore) ;
     
-    container.appendChild(content);
+    // container.appendChild(content);
 }
 )
 

@@ -1,0 +1,16 @@
+#ff{
+    display:flex;
+    justify-content: space-between;
+    outline: 2px solid red; 
+     width: 500px;
+      height:150px;
+      background-color: aqua;
+      align-items: center;
+}
+.bt{
+    border: 2px solid black;
+    width: 90px;
+    height:50px;
+    font-weight: bold;
+    margin: 15px;
+}
