@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Library System</h1>
+   <form id="newBook">
+    <h2>Add a new book</h2>
+       <label for="bookName">Title:</label>
+       <br>
+       <input type="text" id="title" name="bookName">
+       <br>
+       <label for="author">Author</label>
+       <br>
+       <input type="text" id="author" name="author">
+       <br>
+       <button type="submit">Add Book</button> 
+   </form>
+   <br>
+    <button id="showBooks">Show books</button>
+    <div>
+        <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                    </tr>
+                </thead>
+                <tbody id="table">
+
+                </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
