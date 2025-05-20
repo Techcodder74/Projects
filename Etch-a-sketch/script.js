@@ -1,6 +1,6 @@
 const gridContainer=document.querySelector(".grid-container")
 const createGridButton = document.getElementById('create-grid');
-// const gridSizeInput = document.getElementById('grid-size');
+
 function getRandomRGB() {
     // Generate random values for red, green, and blue
     const r = Math.floor(Math.random() * 256); // Random number between 0 and 255
@@ -28,17 +28,44 @@ function createGrid(size){
 }
 
 // Add hover effect to all cells
-const cells = document.querySelectorAll(".cell");
-cells.forEach(cell => {
-    cell.addEventListener('mouseover', function() {
-        cell.style.backgroundColor = getRandomRGB();
-    });
+// const cells = document.querySelectorAll(".cell");
+// cells.forEach(cell => {
+//     cell.addEventListener('mouseover', function() {
+//         cell.style.backgroundColor = getRandomRGB();
+//     });
 
-    cell.addEventListener('mouseout', function() {
-        cell.style.backgroundColor = 'lightblue';
-    });
-});
+//     cell.addEventListener('mouseout', function() {
+//         cell.style.backgroundColor = 'lightblue';
+//     });
+// });
+// }
+
+
+
 }
+// event delegation
+gridContainer.addEventListener('mouseover',(E)=>
+{
+    if(E.target.classList.contains('cell'))
+    {
+        E.target.style.backgroundColor=getRandomRGB();
+    }
+})
+gridContainer.addEventListener('mouseout',(E)=>
+{
+    if(E.target.classList.contains('cell'))
+    {
+        E.target.style.backgroundColor='lightblue';
+    }
+})
+createGridButton.addEventListener('click', function() {
+    // const newSize = parseInt(gridSizeInput.value); // Get grid size from input
+    const newSize=prompt("Enter the size of new grid");
+    createGrid(newSize);  // Create a new grid based on input size
+});
+document.addEventListener("DOMContentLoaded", function() {
+    createGrid(16); // Default grid size
+});
 // const div=document.createElement("div");
 // for(let i=0; i<16; i++)
 // {
@@ -68,11 +95,3 @@ cells.forEach(cell => {
 //  cell.style.backgroundColor='lightblue';
 // });
 // });
-createGridButton.addEventListener('click', function() {
-    // const newSize = parseInt(gridSizeInput.value); // Get grid size from input
-    const newSize=prompt("Enter the size of new grid");
-    createGrid(newSize);  // Create a new grid based on input size
-});
-document.addEventListener("DOMContentLoaded", function() {
-    createGrid(16); // Default grid size
-});
