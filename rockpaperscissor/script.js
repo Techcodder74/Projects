@@ -65,7 +65,11 @@ function Play(hu){
         humanscore=humanscore+1;
     }
     const container = document.querySelector("#container");
-
+    const pscore=document.querySelector("#plscore");
+    
+    pscore.innerHTML=humanscore;
+    const comscore=document.querySelector("#comscore");
+    comscore.innerHTML=compscore;
 // const content = document.createElement("div");
 // content.classList.add("content");
 // content.textContent =ty ;
@@ -92,18 +96,7 @@ const sci = document.querySelector("#scissor");
 sci.addEventListener("click", ()=>{
    Play(0);
 });
-const sc=document.querySelector("#score");
-sc.addEventListener("click", ()=>
-{
-    const container = document.querySelector("#container");
 
-    // const content = document.createElement("div");
-    // content.classList.add("content");
-    container.innerHTML = "Computer score = "+String(compscore)+" Your Score = "+ String(humanscore) ;
-    
-    // container.appendChild(content);
-}
-)
 
 
 

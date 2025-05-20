@@ -20,3 +20,10 @@
     
 
 }
+.scores{
+        display: flex;
+        justify-content: space-between;
+        max-width: 400px;
+        align-content: center;
+        align-items: center;
+}
