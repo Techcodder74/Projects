@@ -26,4 +26,28 @@
         max-width: 400px;
         align-content: center;
         align-items: center;
+        gap:5px;
+       
+
+}
+
+.cs {
+          text-decoration: dashed;
+          font-size: 30px;
+          font-weight: 700;
+          border: 3px solid green;
+          border-radius: 30px;
+          padding: 10px;
+          margin-bottom: 20px;
+          margin:10px;
+
+}
+#plscore, #comscore{
+    text-align: center;
+    font-size: 55px;
+    color: blue;
+    background-color: antiquewhite;
+    border-radius: 60px;
+     box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.1);
+
 }
