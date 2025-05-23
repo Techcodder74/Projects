@@ -1,5 +1,5 @@
 const display=document.querySelector("#display")
-const cell=document.querySelectorAll(".cell")
+const cell=document.querySelector(".calcBody")
 let ss=""
 operands=['+','-','*','/','(',')']
 postexp=[];
@@ -96,8 +96,9 @@ function evalv()
     ss=stack.pop();
 
 }
-cell.forEach((t)=>{t.addEventListener('click',(e)=>{
+cell.addEventListener('click',(e)=>{
     const target=e.target;
+   if (target.classList.contains("cell")){ 
     let val=target.dataset.value;
     if(val==="AC"){
         ss="";
@@ -120,5 +121,5 @@ cell.forEach((t)=>{t.addEventListener('click',(e)=>{
     else{
         ss=ss+val;
         dis();
-    }
-})})
+    }}
+})
