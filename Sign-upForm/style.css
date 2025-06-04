@@ -10,7 +10,7 @@ html, body {
 }
 @font-face {
   font-family: norse;
-  src: url(../images/norse.otf);
+  src: url(images/norse.otf);
 }
 body {
     margin: 0;
@@ -25,7 +25,7 @@ body {
     flex:2;
     position :relative;
     height:100%;
-    background: no-repeat url("/images/back.png");
+    background: no-repeat url("images/back.png");
      background-size: cover;
 }
 
