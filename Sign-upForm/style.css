@@ -104,17 +104,7 @@ label{
     font-family: 'Lato', sans-serif;
 
 }
-input{
-    border: #E5E7EB solid 2px;
-    width:200px;
-    height:2em;
-}
-input:invalid{
-    border:red solid 2px;
-}
-input:hover{
-    border:#596D48 solid 2px;
-}
+
 a:hover{
     font-size: 1.02em;
 }
@@ -138,4 +128,23 @@ a:hover{
 }
 .last{
       padding-left: var(--pl);
+}
+input:focus{
+    border:blue solid 2px;
+    outline:none;
+     box-shadow: 0 1px 2px 3px rgba(0, 0, 0, 0.08);
+}
+input{
+    border: #E5E7EB solid 2px;
+    width:200px;
+    height:2em;
+    border-radius: 7px 5px;
+     padding: 4px 8px;
+       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+input:invalid{
+    border:red solid 2px;
+}
+input:hover{
+    border:#596D48 solid 2px;
 }
