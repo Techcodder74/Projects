@@ -1,0 +1,141 @@
+:root{
+    --pl:40px;
+}
+img{
+    max-width: 100px;
+    max-height: 100px;
+}
+html, body {
+    height: 100%;
+}
+@font-face {
+  font-family: norse;
+  src: url(../images/norse.otf);
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+
+}
+
+
+.imagpart{
+    flex:2;
+    position :relative;
+    height:100%;
+    background: no-repeat url("/images/back.png");
+     background-size: cover;
+}
+
+.ref{
+    color:aliceblue;
+    position:absolute;
+    bottom:2%;
+    
+    left: 25%;
+}
+.ref a{
+   
+    color:white;
+}
+.Odin{
+    color:white;
+    position :absolute;
+    top:15%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: norse;
+   background: rgb(0 0 0 / 40%);
+    width:100%;
+    font-size:5em;
+    padding:0.2em;
+    box-sizing: border-box;
+    
+}
+.Formpart{
+    flex:3;
+    height :100%;
+   
+    padding: 6em 0em 0em 0em;
+    background-color: azure;
+}
+.upperText{
+    max-width: 450px;
+    font-size: larger;
+    font-weight: 600;
+     font-family: 'Roboto', sans-serif;
+     padding-left: var(--pl);
+}
+.cell{
+    display:flex;
+    gap:6em;
+    margin-bottom: 2.2em;
+}
+.blo{
+    display:flex;
+    flex-direction: column;
+    gap:0.2em;
+}
+#ft{
+    margin-bottom: 2em;
+       font-size: larger;
+    font-weight: 600;
+     font-family: 'Roboto', sans-serif;
+}
+button{
+    color:white;
+    background-color:#596D48;
+    padding:15px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom:1em ;
+    border:#596D48 solid 2px; 
+}
+button:hover{
+    color:#596D48;
+    background-color:white;
+    border:#596D48 solid 2px; 
+}
+label{
+    color:rgb(70, 64, 64);
+    font-family: 'Lato', sans-serif;
+
+}
+input{
+    border: #E5E7EB solid 2px;
+    width:200px;
+    height:2em;
+}
+input:invalid{
+    border:red solid 2px;
+}
+input:hover{
+    border:#596D48 solid 2px;
+}
+a:hover{
+    font-size: 1.02em;
+}
+#log{
+    color:#596D48;
+    font-weight: 500;
+    text-decoration: underline;
+}
+#log :hover{
+   font-size: larger;
+   color:#404e33;
+   text-decoration: underline;
+}
+.f1{
+    background-color: rgb(250, 255, 255);
+    width: 100%;
+     padding:1em 1em 0.03em var(--pl);
+
+    margin-bottom: 20px;
+    box-shadow: 0 4px 30px -2px rgba(0, 0, 0, 0.3);
+}
+.last{
+      padding-left: var(--pl);
+}
