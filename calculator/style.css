@@ -6,7 +6,7 @@ body{
     padding: 0;
     align-content: center;
      height: 100vh;
-     background-color: aqua;
+     background-color: black;
      flex-direction: column;
 }
 .row{
@@ -24,14 +24,18 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
     font-weight: 700;
+    border-radius: 25%;
 }
 .calcBody{
     display:flex;
     flex-direction: column;
     gap :5px;
-    background-color: black;
-    border:10px solid blue;
+    background-color: rgb(rgb(137, 25, 25), rgb(33, 44, 33), blue);
+    border:4px solid  yellowgreen;
     width :350px;
+    border-radius: 40px;
+    padding: 12px;
+    box-shadow: 10px 5px 4px 3px  peachpuff ;
     
 }
 #display{
@@ -41,12 +45,21 @@ body{
     display:flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: 30px;
+    font-size: 40px;
     font-weight:900 ;
     background-color: aliceblue;
+    border-radius: 15px;
+   color :rgb(16, 45, 125)
 
 }
 
 #zero{
   flex-grow: 2;
+}
+.red{
+    background-color:orangered;
+    color: aliceblue;
+}
+.bot{
+    background-color: blanchedalmond;
 }

@@ -1,14 +1,15 @@
 table{
     border:1px solid black;
     border-collapse: collapse;
+    border-spacing:0.5em;
 }
 td, th{
     
-    text-align: center;
+    text-align: left;
+    padding: 5px;
+
 }
 
-
-  
   td {
     letter-spacing: 1px;
     border: 1px solid grey;
@@ -16,28 +17,21 @@ td, th{
     
   }
   tbody tr:nth-child(odd) {
-    background-color:lightgrey
+    background-color:lightgrey;
   }
   
   tbody tr:nth-child(even) {
-    background-color: lightblue;
+    background-color:white;
   }
-  tbody th.type:nth-child(odd) {
-    background-color:lightcoral;
-  }
-  
-  tbody th.type:nth-child(even) {
-    background-color: lightpink;
-  }
- th{         letter-spacing: 2px;
-           border: 1px solid black;
-           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-           font-weight: 200px;
+
+ th{        
+   letter-spacing: 2px;
+  border: 1px solid black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 200px;
  }
   
-  table {
-    background-color: red;
-  }
+
   .plan{
     border-left: 3px solid black;
     border-right: 3px solid black;
@@ -48,3 +42,14 @@ td, th{
   #top{
     border-top: 3px solid black;
   }
+  thead th {
+   background-color: #f39c12; /* deep blue-gray */
+  color: white;     
+    text-transform: uppercase;
+
+   
+}
+tbody th[scope="row"] {
+  background-color: #7f8c8d;  /* Cool gray */
+  color: white;
+}
