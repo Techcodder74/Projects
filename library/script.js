@@ -1,33 +1,91 @@
+const dialog=document.querySelector("#box");
+const showbtn=document.querySelector("#add");
+const form=document.getElementById("newBook");
+const sho=document.getElementById("showBooks");
+const hB=document.getElementById("hide");
+const readbtn=document.querySelector("Read");
+const table=document.getElementById("table");
+
+
+
+
 function newBook(title,author)
 {
     this.title=title;
-    this.author=author;}
+    this.author=author;
+    this.isread=false;
+    this.id=crypto.randomUUID();
+
+}
 
 let lib=[];
+lib.push(new newBook("csac","sdv"));
+lib.push(new newBook("2csac","sdv"));
+lib.push(new newBook("3csac","sdv"));
+
+
+
+
 
 function show(){
-const table=document.getElementById("table");
+
 table.innerHTML="";
 for(let i=0; i<lib.length; i++)
-{
+{   let stau=lib[i].isread?"Unread":"Read";
     let nr=document.createElement("tr");
-    nr.innerHTML="<td>"+(i+1)+"</td><td>"+lib[i].title+"</td><td>"+lib[i].author+"</td>";
+    nr.setAttribute("id", lib[i].id);
+    nr.innerHTML=`<td>${i+1}</td><td>${lib[i].title}</td><td>${lib[i].author}</td><td><button class="Read" data-id="${lib[i].id}">${stau}</button></td><td><button class="delete" data-id="${lib[i].id}" >Delete</button></td>`;
     table.append(nr);
 
 }}
-const form=document.getElementById("newBook");
-form.addEventListener('submit', function(event){
-    event.preventDefault();
-    const ff=new FormData(form);
-    lib.push(new newBook(ff.get("bookName"),ff.get("author")));
-   form.reset();
+
+
+
+showbtn.addEventListener("click",(e)=>
+{
+    dialog.showModal();
 })
-const sho=document.getElementById("showBooks");
+
+
+
+dialog.addEventListener("close",()=>
+{
+    if(dialog.returnValue==="submit")
+    {
+        let bu=form.elements["bookName"].value;
+        let au=form.elements["author"].value;
+        lib.push(new newBook(bu,au));
+        show();
+    }
+})
+
+
+
 sho.addEventListener('click',function(){
     show();
 })
-const hB=document.getElementById("hide");
+
 hB.addEventListener('click',function(){
     const table=document.getElementById("table");
 table.innerHTML="";
 })
+
+readbtn
+table.addEventListener("click",(e)=>{
+    if(e.target.classList.contains("Read"))
+    {
+        let id=e.target.dataset.id;
+        book=lib.find(b=>b.id===id);
+        book.isread=!book.isread;
+        show();
+    }
+    else if(e.target.classList.contains("delete"))
+    {
+        let id=e.target.dataset.id;
+        lib=lib.filter(b=>b.id!==id);
+     
+        show();
+
+    }
+})
+show();

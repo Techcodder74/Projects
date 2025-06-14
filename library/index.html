@@ -4,31 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1> Library System</h1>
-   <form id="newBook">
+    <dialog id="box">
+   <form id="newBook" method="dialog">
     <h2>Add a new book</h2>
        <label for="bookName">Title:</label>
        <br>
-       <input type="text" id="title" name="bookName">
+       <input type="text" id="title" name="bookName" required>
        <br>
        <label for="author">Author</label>
        <br>
-       <input type="text" id="author" name="author">
+       <input type="text" id="author" name="author" required>
        <br>
-       <button type="submit">Add Book</button> 
+       <button value="submit">Add Book</button> 
+       <button value="cancel" formmethod="dialog" onclick="box.close()">Cancel</button>
    </form>
+   </dialog>
    <br>
+   <div class="up">
     <button id="showBooks">Show books</button>
     <button id="hide">Hide books</button>
+     <button id="add" >Add a book</button>
+     </div>
     <div>
         <table>
                 <thead>
                     <tr>
-                        <th>bookid</th>
+                        <th>Sr no</th>
                         <th>Title</th>
                         <th>Author</th>
+                        <th>Status</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody id="table">
