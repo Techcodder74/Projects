@@ -9,17 +9,21 @@ const table=document.getElementById("table");
 
 
 
-function newBook(title,author)
-{
+class newBook
+{   constructor(title,author){
     this.title=title;
     this.author=author;
     this.isread=false;
     this.id=crypto.randomUUID();
-
+}
+  read()
+  {
+    this.isread=!this.isread;
+  }
 }
 
 let lib=[];
-lib.push(new newBook("csac","sdv"));
+lib.push(new newBook("Harry Potter","jk rowling"));
 lib.push(new newBook("2csac","sdv"));
 lib.push(new newBook("3csac","sdv"));
 
@@ -70,13 +74,12 @@ hB.addEventListener('click',function(){
 table.innerHTML="";
 })
 
-readbtn
 table.addEventListener("click",(e)=>{
     if(e.target.classList.contains("Read"))
     {
         let id=e.target.dataset.id;
         book=lib.find(b=>b.id===id);
-        book.isread=!book.isread;
+        book.read();
         show();
     }
     else if(e.target.classList.contains("delete"))
