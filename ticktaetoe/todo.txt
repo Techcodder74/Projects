@@ -1,8 +1,0 @@
-logic of:
-    preventing overwriting
-    checking winning
-    resetting by adding reset button
-reading different types for functions
-beutify the code
-adding two options play with computer and simple play
-
